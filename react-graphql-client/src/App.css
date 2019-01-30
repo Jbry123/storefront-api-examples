@@ -1,0 +1,173 @@
+.App {
+    background-color: #f1f1f1;
+    background-image: url('./BlackWhiteBackground.png');
+    background-size: 110%;
+}
+.Header {
+    background-position: center;
+    background-image: url('./occultTrippy1.gif');
+    color: white;
+    font-size: 25px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.productHeader {
+    display: flex;
+    justify-content: center;
+    background-color: goldenrod;
+    align-content: center;
+    align-items: center;
+    margin-left: 12.25%;
+    margin-right: 12.25%;
+    border-radius: 10px;
+    margin-bottom: 15%;
+}
+
+.ProductWrapper {
+  max-width: 900px;
+  min-width: 325px;
+  width: 95%;
+  margin: 40px auto 0px;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+select.Product__option {
+    display: none;
+}
+.productTitle {
+    position: relative;
+    color: #daa520;
+    background: #00000090;
+    opacity: 1;
+    z-index: 5;
+    font-weight: 500;
+}
+
+.productPrice {
+    background: #daa520;
+    font-size: 10px;
+}
+
+.overlay {
+    position: relative; 
+    bottom: 0;
+    background: #daa52099; /* Black see-through */
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity: 1;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 7px;
+    z-index: 10;
+  }
+
+.productPicture {
+    z-index: 1;
+    border-radius: 5px;
+    width: 100%;
+    min-width: 120px;
+    justify-content: center;
+}  
+
+.TitleContainer {
+    color: goldenrod;
+    text-shadow: gold 1px 2px;
+    height: 200px;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+@keyframes cross2 {
+ 0% {top: 250px}
+ 50% {top: 400px}
+ 100% { top: 250px}
+}
+
+@keyframes pyramid1 {
+    0% {top: 600px}
+    50% {top: 500px}
+    100% { top: 600px}
+   }
+   
+
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.cross1, .cross2, .cross3, .cross4 {
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    z-index: 100;
+}
+.pyramid1 {
+    width: 100px;
+    height: 75px;
+    position: absolute;
+    z-index: 1;
+}
+
+.cross1 {
+    right: 0px;
+    top: 0px;
+}
+
+.cross2 {
+    right: 15px;
+    top: 200px;
+    animation: cross2 24s infinite;
+}
+
+.pyramid1 {
+    top: 500px;
+    animation: pyramid1 15s infinite;
+    animation-delay: 3s
+}
+
+.pentagram {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    animation: spin 6s infinite;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.topProducts {
+    width: 175px;
+    height: 65px;
+}
+
+.text1 {
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.text2 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.addToCart {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: goldenrod;
+    border: #000 solid 2px;
+    font-family: 'Avenir' sans-serif;
+    font-weight: 700;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+}

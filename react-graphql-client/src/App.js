@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import Products from './components/Products';
 import Cart from './components/Cart';
 import {gql} from 'babel-plugin-graphql-js-client-transform';
+import './App.css';
+import cross from './crossSnake.png';
+import triangle from './occultTri.png'
+import pentagram from './inverted_pentagram.jpg';
+import topProducts from './topProducts.png';
 
 class App extends Component {
   constructor() {
@@ -272,17 +277,29 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App__header">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+              {/* <img className="cross1 animated infinite swing" src={cross} alt="High street fashion"/> */}
+              <img className="cross2" src={cross} alt="Pop Art"/>
+              {/* <img className="cross3" src={cross} alt="Occult fashion, goth clothing"/>
+              <img className="cross4" src={cross} alt="Hard enamel Pins"/> */}
+              <img className="pyramid1" src={triangle} alt="Occult fashion, goth clothing"/>
+        <header className="Header">
           {!this.state.isCartOpen &&
             <div className="App__view-cart-wrapper">
               <button className="App__view-cart" onClick={()=> this.setState({isCartOpen: true})}>Cart</button>
             </div>
           }
-          <div className="App__title">
-            <h1>{this.state.shop.name}: React Example</h1>
-            <h2>{this.state.shop.description}</h2>
+          <div className="TitleContainer">
+            <h1 className="text1">Insanity</h1>
+            <h2 className="text2">Pop culture. Occult. Anarchy.</h2>
           </div>
         </header>
+
+        <div className="productHeader">
+          <img className="pentagram" alt="goth fashion" src={pentagram}></img>
+          <img className="topProducts" alt="goth fashion" src={topProducts}></img>          
+        </div>
+
         <Products
           products={this.state.products}
           addVariantToCart={this.addVariantToCart}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Product from './Product';
+import '../App.css';
 
 class Products extends Component {
   render() {
@@ -15,7 +16,7 @@ class Products extends Component {
     });
 
     return (
-      <div className="Product-wrapper">
+      <div className="ProductWrapper">
         {products}
       </div>
     );
